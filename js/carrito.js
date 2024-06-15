@@ -17,7 +17,7 @@ function cargarFinanciarCoches () {
     
 }
 
-cargarFinanciarCoches ()
+
 
 function importeFinanciado(modeloCoche) {
     let resultado = coches.find((coche) => coche.modelo === modeloCoche);
@@ -58,6 +58,8 @@ btnUltimaFinanciacion.addEventListener ("click", ()=> {
         alert("No has solicitando ninguna financiación previamente.")
     }
 })
+
+cargarFinanciarCoches ()
 /*-------------------PRUEBA*/
 
     
