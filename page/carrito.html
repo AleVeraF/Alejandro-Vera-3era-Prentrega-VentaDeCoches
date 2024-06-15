@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VentaDeCoches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/coches.js"></script>
+    <script defer src="../js/carrito.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html"> <img class="logo" src="../image/logo.gif" alt="Logo con iniciales AV"></a>
+        <h2>ESTO ES EL NAV</h2>
+    </nav>
+    <main>
+        <section class="cocheCarrito">
+            <h1>¡Gracias por elegirnos!</h1>
+            <div id="carritoContenido"></div>
+            <button class="button">Comprar</button>
+                <button id="Quitar" class="button">Quitar</button>
+            
+            
+        </section>
+
+        <section class="financiar">
+            <h2>¿Deseas Financiar tu compra?</h2>
+            <div class="seleccionar">
+                <label for="Selecciona coche"> Selecciona el coche que deseas financiar</label>
+                <select name="Elige el coche" id="seleccionarCoche">
+                    <option  selected disabled>Selecciona el coche que desees</option>
+                </select>
+                <label for="Selecciona meses"> Selecciona en cuantos meses te gustaría financiar el coche</label>
+               <input type="number" id="seleccionarMeses" value="24" min="24" max="120" step="12">
+            </div>
+
+            <div class="importeFinanciar">
+                <p class="importe"> El importe a pagar mensual es: €</p>
+                <button class="button">Financiar</button>
+                <button id="recuperar" class="button">Recuperar</button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h4>Página sin fines de lucro</h4>
+            <h4>Redes sociales</h4>
+            <h5>Copy right Alejandro Vera</h5>
+
+        </div>
+        <div class="rrss">
+            <img src="../image/linkeding.png" alt="Logo de Linkeding">
+            <img src="../image/instagram.PNG" alt="Logo de Instagram">
+            <img src="../image/twiter.PNG" alt="Logo de Twiter">
+        </div>
+    </footer>
+</body>
+
+</html>

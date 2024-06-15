@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../image/fondo.PNG);
+    background-attachment: fixed;
+    position: relative;
+    
+}
+
+nav,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 200px;
+    background-color: rgb(126, 161, 122);
+}
+
+.logo {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.carrito {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+p {
+    font-size: 45px;
+    -webkit-text-stroke: black 0.5px;
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    padding: 90px;
+    background-attachment: fixed;
+    background-repeat: round;
+    background-size: cover;
+    text-align: center;
+}
+
+.hero-content img {
+    display: none;
+}
+
+
+.content {
+    background-color:rgb(53, 75, 51);
+    border: 4px solid black;
+    opacity: 0.98;
+    height: 200px;
+
+    border-radius: 25px;
+}
+
+h1 {
+    font-size: 70px;
+    -webkit-text-stroke: black 0.2px;
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content-info {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(126, 161, 122);
+}
+
+h2 {
+    font-size: 70px;
+    -webkit-text-stroke: black 0.5px;
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+
+li {
+    font-size: 25px;
+}
+
+.title-cards {
+    color: rgb(126, 161, 122)
+}
+
+.coches {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    height: 1800px;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid black;
+    background-color: rgb(126, 161, 122);
+    height: 500px;
+    width: 450px;
+    border-radius: 25px;
+}
+
+.img-coches {
+    height: 330px;
+    width: 430px;
+    border-radius: 25px;
+}
+
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: rgb(53, 75, 51);
+    font-size: 20px;
+    color: white;
+}
+
+footer  {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    -webkit-text-stroke: black 0.2px;
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* PÁGINA CARRITO */
+
+.cocheCarrito {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.financiar {
+    background-color:rgb(53, 75, 51);
+    border: 4px solid black;
+    opacity: 0.98;
+    height: 400px;
+
+    border-radius: 25px;
+}
+
+.seleccionar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.seleccionar label {
+    font-size: 25px;
+    color: aliceblue;
+
+}
+.importeFinanciar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#seleccionarCoche {
+    width: 350px;
+    text-align: center;
+    
+}
+
+#seleccionarMeses {
+    width: 350px;
+    text-align: center;
+}
+
+.importeFinanciar button {
+    width: 140px;
+}
+option {
+    color: black;
+}
+
+#carritoContenido {
+    background-color:rgb(126, 161, 122); 
+    height: 250px;
+    width: 450px;
+    border-radius: 35px;
+    border: 4px solid black;
+    
+}

@@ -1,0 +1,12 @@
+const coches = [
+    {codigo: 1, marca: 'Toyota', foto:'./image/corolla.PNG', modelo:'Toyota Corolla', gama:'Gama Media', año: 2025, importe: 35000 + '€' },
+    {codigo: 2, marca: 'toyota', foto:'./image/yaris.PNG', modelo:'Toyota Yaris', gama:'Gama Media', año: 2023, importe: 18000 + '€' },
+    {codigo: 3, marca: 'toyota', foto:'./image/yariscross.PNG', modelo:'Toyota Yaris Cross', gama:'Gama Media', año: 2024, importe: 26000 + '€' },
+    {codigo: 4, marca: 'bugatti', foto:'./image/divo.PNG', modelo:'Bugatti Divo', gama:'Gama Alta', año: 2024, importe: 5000000 + '€' },
+    {codigo: 5, marca: 'bugatti', foto:'./image/chiron.PNG', modelo:'Bugatti Chiron', gama:'Gama Alta', año: 2023, importe: 2000000 + '€' },
+    {codigo: 6, marca: 'Lamborghini', foto:'./image/huracan.PNG', modelo:'Lamborghini Huracan', gama:'Gama Alta', año: 2023, importe: 2000000 + '€' },
+    {codigo: 7, marca: 'kia', foto:'./image/rio.PNG', modelo:'Kia Rio', gama: 'Gama Baja', año: 2023, importe: 15000 + '€' },
+    {codigo: 8, marca: 'kia', foto:'./image/ceed.PNG', modelo:'Kia Ceed', gama:'Gama Baja', año: 2024, importe: 25000 + '€'},
+    {codigo: 9, marca: 'kia', foto:'./image/sportage.PNG', modelo:'Kia Sportage', gama:'Gama Baja', año: 2025, importe: 34000 + '€'}
+
+]
