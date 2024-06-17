@@ -1,24 +1,7 @@
-/*
-<div class="cards">
-                    <h3 id="marca">Toyota Corolla</h3>
-                    <img class="img-coches" src="image/corolla.PNG" alt="Coche de marca Corolla">
-                    <ul>
-                        <li id="gama">Coche de gama media</li>
-                        <li id="año">Año 2024</li>
-                        <li id="importe">25.000€</li>
-                    </ul>
-                    <button class="button">Comprar</button>
-                </div>
-*/
-// objeto del tipo HTMLElement
 const titulo = document.getElementById("marca");
 const cards = document.getElementsByClassName("cards");
 const conteinerCoches = document.querySelector('#conteinerCoches')
 const carrito = document.querySelector('.carrito')
-
-
-
-
 
 function cardHtml(coches) {
     return `<div class="cards">
@@ -33,8 +16,6 @@ function cardHtml(coches) {
                 </div>`
 }
 
-
-
 function cargarCoches() {
     if (coches.length > 0) {
         cards.innerHTML = ""
@@ -43,8 +24,6 @@ function cargarCoches() {
     } else { }
 }
 
-
-
 cargarCoches();
 
 const CompraCarrito = []
@@ -52,31 +31,35 @@ const CompraCarrito = []
 const botonComprar = document.querySelectorAll('button.button')
 
 function ActivarClick() {
-    const botonAgregar = document.querySelectorAll('button.button')
+    const botonAgregar = document.querySelectorAll('button.button');
     if (botonAgregar.length > 0) {
         botonAgregar.forEach((boton) => {
-            boton.addEventListener ("click", ()=>{
-                const cocheSeleccionado = coches.find((coche)=> coche.codigo == boton.id)
-                CompraCarrito.push(cocheSeleccionado)
-                console.table(CompraCarrito)
+            boton.addEventListener("click", () => {
+                if (CompraCarrito.length > 0) {
+                    alert("Ya tienes un coche agregado al carrito");
+                } else {
+                    const cocheSeleccionado = coches.find((coche) => coche.codigo == boton.id);
+                    if (cocheSeleccionado) {
+                        CompraCarrito.push(cocheSeleccionado);
+                        console.table(CompraCarrito);
 
-                // Guardar en localStorage
-                localStorage.setItem('compraCarrito', JSON.stringify(CompraCarrito));
-            })
-        })
+                        
+                        localStorage.setItem('compraCarrito', JSON.stringify(CompraCarrito));
+                    } else {
+                        console.error(`No se encontró el coche con código: ${boton.id}`);
+                    }
+                }
+            });
+        });
     }
 }
-
-
-
-
 carrito.addEventListener("click", () => {
     if (CompraCarrito.length > 0) {
-        location.href = "page/carrito.html"
+        location.href = "page/carrito.html";
     } else {
-        alert("Debes cargar un coche al carrito")
+        alert("Debes cargar un coche al carrito");
     }
-})
+});
 
 carrito.addEventListener("mousemove", () => {
     if (CompraCarrito.length > 0) {

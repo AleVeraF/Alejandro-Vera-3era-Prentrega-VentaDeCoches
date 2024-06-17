@@ -35,8 +35,8 @@ footer {
     display: flex;
     position: fixed;
     z-index: 5;
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     border-radius: 100%;
 }
 
@@ -170,6 +170,13 @@ footer  {
 
 /* PÁGINA CARRITO */
 
+.CocheSeleccionado {
+    font-size: 70px;
+    -webkit-text-stroke: black 0.2px;
+    color: rgb(184, 192, 199);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .cocheCarrito {
     display: flex;
     flex-direction: column;
@@ -255,3 +262,19 @@ option {
     font-size: 20px;
     color: white;
 }
+
+div#mensajeComprar{
+    visibility: hidden;
+    height: 200px;
+    width: 600px;
+    text-align: center;
+    background-color: rgb(126, 161, 122);
+    border-radius: 12px;
+    border: 2px solid black;
+}
+
+.compraRealizada {
+    visibility: visible !important;
+}
+
+

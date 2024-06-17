@@ -6,7 +6,6 @@
     <title>VentaDeCoches</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js"></script>
     <script src="../js/coches.js"></script>
     <script defer src="../js/carrito.js"></script>
 </head>
@@ -17,11 +16,15 @@
         <h2>ESTO ES EL NAV</h2>
     </nav>
     <main>
+       
         <section class="cocheCarrito">
-            <h1>¡Gracias por elegirnos!</h1>
+            <h1 class="CocheSeleccionado">Pagar coche de contado</h1>
             <div id="carritoContenido"></div>
-            <button class="botoncarrito" >Comprar</button>
-                <button class="botoncarrito">Quitar</button>
+            <div id="mensajeComprar">
+                <h2>¡Muchas gracias por su compra!</h2>
+            </div>
+            <button id="comprar" class="botoncarrito" >Comprar</button>
+                <button id="quitar" class="botoncarrito">Quitar</button>
             
             
         </section>
