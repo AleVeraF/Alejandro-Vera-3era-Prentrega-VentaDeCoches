@@ -12,25 +12,44 @@ function mensajeOk (titulo, mensaje, icono) { Swal.fire({
   });
 }
 
-function cardHtml(coches) {
+function cardHtml(coche) {  // Asegúrate de que el parámetro es 'coche'
     return `<div class="cards">
-                    <h3 id="marca">${coches.modelo}</h3>
-                    <img class="img-coches" src="${coches.foto}" alt="Coche de marca Corolla">
-                    <ul>
-                        <li id="gama">${coches.gama}</li>
-                        <li id="año">${coches.año}</li>
-                        <li id="importe">${coches.importe}</li>
-                    </ul>
-                    <button id='${coches.codigo}' class="button">Comprar</button>
-                </div>`
+                <h3 id="marca">${coche.modelo}</h3>
+                <img class="img-coches" src="${coche.foto}" alt="Coche de marca ${coche.modelo}">
+                <ul>
+                    <li id="gama">${coche.gama}</li>
+                    <li id="año">${coche.año}</li>
+                    <li id="importe">${coche.importe}</li>
+                </ul>
+                <button id='${coche.codigo}' class="button">Comprar</button>
+            </div>`;
 }
 
 function cargarCoches() {
-    if (coches.length > 0) {
-        cards.innerHTML = ""
-        coches.forEach((coches) => conteinerCoches.innerHTML += cardHtml(coches))
-        ActivarClick()
-    } else { }
+    fetch('./data/coches.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(coches => {
+            const conteinerCoches = document.getElementById('conteinerCoches');
+            conteinerCoches.innerHTML = "";
+            coches.forEach(coche => {  // Asegúrate de que el parámetro es 'coche'
+                conteinerCoches.innerHTML += cardHtml(coche);
+            });
+            ActivarClick();
+        })
+        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+}
+
+function ActivarClick() {
+    document.querySelectorAll('.button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Compraste el coche con código: ' + button.id);
+        });
+    });
 }
 
 cargarCoches();
